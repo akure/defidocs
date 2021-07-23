@@ -12,7 +12,8 @@ If staked-supply is less than 67%, inflation rate gradually increases, (What is 
 
 Inflation (supply increase) will range between 7% and 20%. That is calculated using the total number of atoms.
 
-Goal Percentage bond 
+**Goal Percentage bond**
+
 It is the balanced value of percentage bond.
 
 Current Percentage bond 
