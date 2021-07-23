@@ -86,22 +86,32 @@ type Params struct {
 	BlocksPerYear       uint64   // expected blocks per year
 }
 
-NextInflationRate(params Params, bondedRatio sdk.Dec) (inflation sdk.Dec) {
-	inflationRateChangePerYear = (1 - bondedRatio/params.GoalBonded) * params.InflationRateChange
-	inflationRateChange = inflationRateChangePerYear/blocksPerYr
+// NextInflationRate returns the new inflation rate for the next hour.
 
-	// increase the new annual inflation for this next cycle
-	inflation += inflationRateChange
-	if inflation > params.InflationMax {
+func (m Minter) NextInflationRate(params Params, bondedRatio sdk.Dec) sdk.Dec {
+	// The target annual inflation rate is recalculated for each previsions cycle. The
+	// inflation is also subject to a rate change (positive or negative) depending on
+	// the distance from the desired ratio (67%). The maximum rate change possible is
+	// defined to be 13% per year, however the annual inflation is capped as between
+	// 7% and 20%.
+
+	// (1 - bondedRatio/GoalBonded) * InflationRateChange
+	inflationRateChangePerYear := sdk.OneDec().
+		Sub(bondedRatio.Quo(params.GoalBonded)).
+		Mul(params.InflationRateChange)
+	inflationRateChange := inflationRateChangePerYear.Quo(sdk.NewDec(int64(params.BlocksPerYear)))
+
+	// adjust the new annual inflation for this next cycle
+	inflation := m.Inflation.Add(inflationRateChange) // note inflationRateChange may be negative
+	if inflation.GT(params.InflationMax) {
 		inflation = params.InflationMax
 	}
-	if inflation < params.InflationMin {
+	if inflation.LT(params.InflationMin) {
 		inflation = params.InflationMin
 	}
 
 	return inflation
-  
-  }
+}
   
   NextAnnualProvisions(params Params, totalSupply sdk.Dec) (provisions sdk.Dec) {
 	return Inflation * totalSupply
