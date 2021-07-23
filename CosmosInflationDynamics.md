@@ -116,7 +116,17 @@ BlockProvision(params Params) sdk.Coin {
  
  
 Calculate the provisions generated for each block based on current annual provisions. The provisions are then minted by the mint module's ModuleMinterAccount and then transferred to the auth's FeeCollector ModuleAccount.
+================================================
 
+Key	Type	Example
+MintDenom	string	"uatom"
+InflationRateChange	string (dec)	"0.130000000000000000"
+InflationMax	string (dec)	"0.200000000000000000"
+InflationMin	string (dec)	"0.070000000000000000"
+GoalBonded	string (dec)	"0.670000000000000000"
+BlocksPerYear	string (uint64)	"6311520"
+
+================================================
 
 **FAQ**
 
