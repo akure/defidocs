@@ -1,5 +1,5 @@
 
-Mint 
+Mint / Inlfation Dynamics
 
 Inflation Rate
 Inflation refers to the monetary supply "inflating" aka growing larger. 
@@ -10,15 +10,25 @@ All of the inflation gets paid to those staking.
 
 If staked-supply is less than 67%, inflation rate gradually increases, (What is the rate of increase though?) until that target is hit. If staked-supply is  greater 67%, it gradually decreases until it falls below that rate.
 
-Inflation (supply increase) will range between 7% and 20%. That is calculated using the total number of atoms. 
+Inflation (supply increase) will range between 7% and 20%. That is calculated using the total number of atoms.
 
+Goal Percentage bond 
+It is the balanced value of percentage bond.
 
+Current Percentage bond 
+
+Market Rate for Inflation Rewards 
+
+Market Liquidity
+
+Bonded Stake Ratio
+
+Staked Supply
 
 Total Supply
 
 Total Bonded/Staked Value
 
-Inlfation Dynamics
 
 
 
