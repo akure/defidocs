@@ -111,8 +111,11 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 -> https://docs.cosmos.network/v0.42/modules/mint/ 
 
 
-## Graph 
-https://drive.google.com/file/d/1qrYpTa3riBcemhojGJrHDE6sIzoKlUcP/view?usp=sharing 
+## Inflation dynamics graph 
+
+- https://drive.google.com/file/d/1qrYpTa3riBcemhojGJrHDE6sIzoKlUcP/view?usp=sharing 
+
+- https://drive.google.com/file/d/1aD3WBzYvB6AKcTNp6cUIWdfZ0G048Hhw/view?usp=sharing
 
 ====================================================================================
 
@@ -207,8 +210,11 @@ Because the remaining unbonded tokens can provide some liquidity.
 
 # Ref :
 - Work in progress. 
-- On each block; system will be adjusted to reflect the current state of the blockchain. 
+- On each block; system will be adjusted to reflect the current state of the blockchain. System control variables are likely to change   to reflect upon the current state of the control variables. 
 - Inflation values will be recalculated based on the current state of the blockchain staking parameters. 
+
+
+[ Input Control Variables ] -> [ SYSTEM STATE ] -> [ Input Control Variables ] 
 
 
 
