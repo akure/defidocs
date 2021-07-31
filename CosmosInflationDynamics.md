@@ -95,11 +95,6 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 ```
 
 
-
-
-
-
-
 ## Current value of the inflation rate
 
 - Current value of the inflation rate is determined by its previous value and currrent value of Inflation Rate Change. 
@@ -111,30 +106,31 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 - When the inflation is in its downward trend due to having the systems bonded ratio greater than optimal value; inflation can reach to its min value and after that it just stops decreasing further. 
 
 
-## Controlling the value of Inflation Rate
-## Effective Inflation Rate 
+## Implementation
+-> Inflation dynamics is implemented in the cosmos-sdk mint module.
+-> https://docs.cosmos.network/v0.42/modules/mint/ 
 
+====================================================================================
+
+# TODO 
+
+## Effective Inflation Rate 
+TODO 
 
 ## Can the True Inflation Rate be negative : 
 I think so; When we are burning tokens it can go temporary negative for that particular block. 
+TODO 
 
 
-
-
+## Types of incentives 
 Work done incentives -> Gas Feess
 Block production incentives -> Inflation
  
-
+## System Inflation Dynamic Control Paramters 
+TODO 
 If staked-supply is less than 67%, inflation rate gradually increases, (What is the rate of increase though?) until that target is hit. If staked-supply is  greater 67%, it gradually decreases until it falls below that rate.
 
 Inflation (supply increase) will range between 7% and 20%. That is calculated using the total number of atoms.
-
-**Goal Percentage bond**
-
-It is the balanced value of percentage bond.
-
-**Current Percentage bond**
-It is the current value of percentage bond in the system.
 
 **Inflation Rate Upper limit**
 20 % annual inflation rate.
@@ -145,15 +141,17 @@ It is the current value of percentage bond in the system.
 **Maximum Inflation Rate Change**
 Maximum by which annual inflation rate can change in an year; it is set as 13%. 
 
+**Inflation dynamics Questions You should Ask? **
+
+-> If the Current Percentage bond is below the goal percentage bonded value, then inflation rate will increase; untill the Inflation Rate Upper limit is reached. [ WHY? ] 
+
+-> If the Current Percentage bond is greater than goal percentage bonded value, then inflation rate will decrease; untill the Inflation Rate Lower limit. [ WHY? ]  
+
+-> Why the Goal Percentage Bond should be set less than 100% bonded?
+Because the remaining unbonded tokens can provide some liquidity. 
 
 
-**Inflation dynamics**
-
-If the Current Percentage bond is below the goal percentage bonded value, then inflation rate will increase; untill the Inflation Rate Upper limit is reached. [ WHY? ] 
-
-If the Current Percentage bond is greater than goal percentage bonded value, then inflation rate will decrease; untill the Inflation Rate Lower limit. [ WHY? ]  
-
-
+## Settin up clear terminologies
 
 Market Rate for Inflation Rewards 
 
@@ -174,7 +172,8 @@ Total Bonded/Staked Value
  
 =====================================================================
 
-
+# Ref :
+Work in progress. 
 On each block; system will be adjusted to reflect the current state of the blockchain. 
 Inflation values will be recalculated based on the current state of the blockchain staking parameters. 
 
@@ -257,8 +256,7 @@ BlocksPerYear	string (uint64)	"6311520"
 
 **FAQ**
 
-**Why the Goal Percentage Bond should be set less than 100% bonded?**
-Because the remaining unbonded tokens can provide some liquidity. 
+
  
 3. 
 
