@@ -145,14 +145,24 @@ Inflation (supply increase) will range between 7% and 20%. That is calculated us
 **Maximum Inflation Rate Change**
 Maximum by which annual inflation rate can change in an year; it is set as 13%. 
 
-**Inflation dynamics Questions You should Ask? **
+# Inflation dynamics Questions You should Ask?
 
--> If the Current Percentage bond is below the goal percentage bonded value, then inflation rate will increase; untill the Inflation Rate Upper limit is reached. [ WHY? ] 
+- If the Current Percentage bond is below the goal percentage bonded value, then inflation rate will increase; untill the Inflation Rate Upper limit is reached. [ WHY? ] 
 
--> If the Current Percentage bond is greater than goal percentage bonded value, then inflation rate will decrease; untill the Inflation Rate Lower limit. [ WHY? ]  
+- If the Current Percentage bond is greater than goal percentage bonded value, then inflation rate will decrease; untill the Inflation Rate Lower limit. [ WHY? ]  
 
--> Why the Goal Percentage Bond should be set less than 100% bonded?
+- Why the Goal Percentage Bond should be set less than 100% bonded?
 Because the remaining unbonded tokens can provide some liquidity. 
+
+- Why is there a min threshold on the value of inflation rate?
+
+
+- Why is there a max threshold on the value of inflation rate?
+
+
+- Why is there a max threshold on the value of inflation rate change?
+
+- Can we call it bond pendulum?
 
 
 ## Settin up clear terminologies
@@ -168,6 +178,25 @@ Because the remaining unbonded tokens can provide some liquidity.
 - Total Supply
 
 - Total Bonded/Staked Value
+
+- atom-holder 
+
+- nonatom-holders 
+
+- atom-holdings
+
+- bonded-atom-holders
+
+- nonbonded-atom-holders
+
+- bonded-atom-behavior
+
+- nonbonded-atom-behavior
+
+- Exteral actors 
+
+- Potential actors 
+
 
 **Annual Provisions**
 
