@@ -38,10 +38,58 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 
 - If the bonded-supply is less then the inflated supply will be shared amoung less number of bonds. And every one would get a high amount as the number of share holders are less.  It is like sharing 100 new tokens supply among 10 bonds so everybond would get only 10 tokens. 
 
-I think; it is clear that in the case #1; bond holders will be less interested to be the part of the system As it does not give enough monetory benifits for its supportes and believers. It is an imbalanced situations. And the case #2 will attract users to join the system as bond holders.
+- I think; it is clear that in the case #1; bond holders will be less interested to be the part of the system As it does not give enough monetory benifits for its supportes and believers. It is an imbalanced situations. And the case #2 will attract users to join the system as bond holders.
 
-To make a good balance; If the system observe a high percentage of bonding ( case #1 )  then it should relatively disincetivize the bold holders. Meaning that it should reduce the incentives from its current incentives.  And the only way to do is to reduce the amount of new supply.  It is to discourage impatient bond holders to loose patients. And only true believers to stay with the system. In this case system encorage non believers bond holders to leave the system. So the system adjust its inflation rate to go down. 
+- To make a good balance; If the system observe a high percentage of bonding ( case #1 )  then it should relatively disincetivize the bold holders. Meaning that it should reduce the incentives from its current incentives.  And the only way to do is to reduce the amount of new supply on the upcoming supply points.  It is to discourage impatient bond holders to loose patients. And only true believers to stay with the system. In this case system encorage non believers bond holders to leave the system. So the system adjust its inflation rate to go down. Similary, if the system observe a low percentage of bonding ( case #2 ) then it should relatetively incentivize the bond holders. Meaning that it increase the incentives from its current incentives. And the only way to do so; is to increase the amount of supply on the upcoming supply points. 
+
+- In the above paragraph; meaning of supply point in the context of blockchain is newly produced blocks. Each block is a supply point. Supply of new generated tokens. 
+
+
  
+## What happens in the cosmos-hub-chain?
+
+- cosmos-hub-chain has set a goal for a balance point of bonded percentage, called GoalBonded. Bond percentage is simply the ratio of the current value of bonded atoms to the total supply at the moment of calculations. GoalBonded is the optimum value the system is trying to obtain with its dynamics. 
+
+- Above and below this value the system is said to operate with a certain degree of imbalance. System dynamics is designed to obtain this value. 
+
+- If the current value of the bond ratio is going far above; system tries to reduce the inflation rate based on how far it went.  The bigger the distance, bigger the rate of reduction in the inflation rate. The bigger the distance; lesser the value of inflation rate. And the value for the rate of reduction and the current value of inflation rate is dynamically calculated at each supply points. Meaning that system will adjust its rate of reduction in the inflation rate and also the current value of the inflation rate at each block production. 
+
+- If the current value of the bond ratio is going far behind; system tries to increase the inflation rate based on how far it went behind the Goal. The bigger the distance, bigger the rate of increase in the inflation rate. The bigger the distance; bigger the value of inflation rate. And the value for the rate of increase and the current value of inflation rate is dynamically calculated at each supply points. Meaning that system will adjust its rate of increase in the inflation rate and also the current value of the inflation rate at each block production. 
+
+
+## Limiting the Value of Inflation Rate Change 
+- Though the system can not have any big or less value of the inflation rate change for increasing or reduction of rate. Positive rate change reflect the increase in the value of inflation rate; while negative rate change reflect the reduction in the value of inflation rate. 
+
+- System should set the maximum value of possible inflation rate change.  
+
+- cosmos-hub-chain controls the positive max value of inflation rate change using a configurable parameter. 
+
+- Negative max value is determined by the current value of the ratio relative to positive max.   
+
+- The minimum absolute value of possible inflation rate change is zero. And it happens when the system is at its optimal value of bonded ratio.  At this point system will not change its inflation rate on its own.  
+
+- Formula of current inflation rate change is given by;
+
+```
+    ( 1 - CurrentBondedRatio / GoalBondedRatio ) ) * Max Positive Inflation Rate 
+```
+
+- But the system dynamics will again move the system to unbalanced zone. So it will again try to come back to balanced point. This is a never ending dynamics. I will explain this complexity in some other section. 
+
+
+
+
+## Limiting the Value of Inflation Rate 
+- This Inflation rate will always be greater than or equal to zero. 
+
+
+
+## Controlling the value of Inflation Rate
+## Effective Inflation Rate 
+
+
+## Can the True Inflation Rate be negative : 
+I think so; When we are burning tokens it can go temporary negative for that particular block. 
 
 
 
