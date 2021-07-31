@@ -22,6 +22,12 @@ cosmos-hub-chain is run by its community members of validators, delegators and a
 
 Contributions are in terms of running the infrastructure, and locking the monetory elements with the system. Locking the monitoring elements with the system means, to provide the fund reserve. 
 
+The current value of the token amount locked in the system for its fund reserve is called staked-supply or bonded-supply, while the total token amount available in the system at any give time is called the total-supply. And the difference between the two is called unbonded-supply or unbonded-holdings. 
+
+At any point of time in the chain, the amount of inflated tokens or generated tokens will be distributed to bond holders or accounts who have staked their holdings with the system. Bond holders are the guys who have staked their tokens with te system as validator or delegators. 
+
+
+
 Work done incentives -> Gas Feess
 Block production incentives -> Inflation
  
