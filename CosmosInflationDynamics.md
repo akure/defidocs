@@ -20,11 +20,12 @@ To understand the dynamics and protocol enforced regulation; you need to underst
 cosmos-hub-chain is a proof of stake chain. Its live operations is run by a set of validators node which also allows delegation facility. Delegation meaning that the indivisual token holders can bond/stake their tokens with he system via any of the validator. Tokens holders are free to choose validators of their choice.
 cosmos-hub-chain is run by its community members of validators, delegators and atom holders. They could be called as network actors. And A sytem which is run and maintained by its believers, should pay fair and deterministic incentives for their contributions. The rules has to be written and automated. 
 
-
+Contributions are in terms of running the infrastructure, and locking the monetory elements with the system. Locking the monitoring elements with the system means, to provide the fund reserve. 
 
 Work done incentives -> Gas Feess
 Block production incentives -> Inflation
  
+
 If staked-supply is less than 67%, inflation rate gradually increases, (What is the rate of increase though?) until that target is hit. If staked-supply is  greater 67%, it gradually decreases until it falls below that rate.
 
 Inflation (supply increase) will range between 7% and 20%. That is calculated using the total number of atoms.
