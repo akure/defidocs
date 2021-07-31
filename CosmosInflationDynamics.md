@@ -24,7 +24,25 @@ Contributions are in terms of running the infrastructure, and locking the moneto
 
 The current value of the token amount locked in the system for its fund reserve is called staked-supply or bonded-supply, while the total token amount available in the system at any give time is called the total-supply. And the difference between the two is called unbonded-supply or unbonded-holdings. 
 
-At any point of time in the chain, the amount of inflated tokens or generated tokens will be distributed to bond holders or accounts who have staked their holdings with the system. Bond holders are the guys who have staked their tokens with te system as validator or delegators. 
+At any point of time in the chain, the amount of inflated tokens or generated tokens will be distributed to bond holders or accounts who have staked their holdings with the system. Bond holders are the guys who have staked their tokens with the system as validator or delegators. 
+
+
+
+## What should control the inflation?
+
+Now we know, that the inflated supply of tokens will be incentivized to the bond holders. 
+
+Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
+
+- If the bonded-supply is high then the inflated supply will be shared among bigger number of bonds. And every one would get a less amount as the number of share holders are large. It is like sharing 100 new tokens supply among 100 bonds so everybond would get a share of only 1 tokens. 
+
+- If the bonded-supply is less then the inflated supply will be shared amoung less number of bonds. And every one would get a high amount as the number of share holders are less.  It is like sharing 100 new tokens supply among 10 bonds so everybond would get only 10 tokens. 
+
+I think; it is clear that in the case #1; bond holders will be less interested to be the part of the system As it does not give enough monetory benifits for its supportes and believers. It is an imbalanced situations. And the case #2 will attract users to join the system as bond holders.
+
+To make a good balance; If the system observe a high percentage of bonding ( case #1 )  then it should relatively disincetivize the bold holders. Meaning that it should reduce the incentives from its current incentives.  And the only way to do is to reduce the amount of new supply.  It is to discourage impatient bond holders to loose patients. And only true believers to stay with the system. In this case system encorage non believers bond holders to leave the system. So the system adjust its inflation rate to go down. 
+ 
+
 
 
 
