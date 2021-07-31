@@ -110,6 +110,10 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 -> Inflation dynamics is implemented in the cosmos-sdk mint module.
 -> https://docs.cosmos.network/v0.42/modules/mint/ 
 
+
+## Graph 
+https://drive.google.com/file/d/1qrYpTa3riBcemhojGJrHDE6sIzoKlUcP/view?usp=sharing 
+
 ====================================================================================
 
 # TODO 
