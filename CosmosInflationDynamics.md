@@ -153,17 +153,17 @@ Because the remaining unbonded tokens can provide some liquidity.
 
 ## Settin up clear terminologies
 
-Market Rate for Inflation Rewards 
+- Market Rate for Inflation Rewards 
 
-Market Liquidity
+- Market Liquidity
 
-Bonded Stake Ratio
+- Bonded Stake Ratio
 
-Staked Supply
+- Staked Supply
 
-Total Supply
+- Total Supply
 
-Total Bonded/Staked Value
+- Total Bonded/Staked Value
 
 **Annual Provisions**
 
@@ -173,9 +173,9 @@ Total Bonded/Staked Value
 =====================================================================
 
 # Ref :
-Work in progress. 
-On each block; system will be adjusted to reflect the current state of the blockchain. 
-Inflation values will be recalculated based on the current state of the blockchain staking parameters. 
+- Work in progress. 
+- On each block; system will be adjusted to reflect the current state of the blockchain. 
+- Inflation values will be recalculated based on the current state of the blockchain staking parameters. 
 
 
 
@@ -233,7 +233,7 @@ func (m Minter) NextInflationRate(params Params, bondedRatio sdk.Dec) sdk.Dec {
 	return Inflation * totalSupply
   }
   
-========================================
+================================================
 BlockProvision(params Params) sdk.Coin {
 	provisionAmt = AnnualProvisions/ params.BlocksPerYear
 	return sdk.NewCoin(params.MintDenom, provisionAmt.Truncate())
@@ -242,6 +242,7 @@ BlockProvision(params Params) sdk.Coin {
  
  
 Calculate the provisions generated for each block based on current annual provisions. The provisions are then minted by the mint module's ModuleMinterAccount and then transferred to the auth's FeeCollector ModuleAccount.
+
 ================================================
 
 Key	Type	Example
@@ -252,12 +253,5 @@ InflationMin	string (dec)	"0.070000000000000000"
 GoalBonded	string (dec)	"0.670000000000000000"
 BlocksPerYear	string (uint64)	"6311520"
 
-================================================
-
-**FAQ**
-
-
  
-3. 
-
 
