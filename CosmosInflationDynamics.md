@@ -1,13 +1,30 @@
 
-Mint / Inlfation Dynamics
+# Cosmos Inflation Dynamics
 
-Inflation Rate
-Inflation refers to the monetary supply "inflating" aka growing larger. 
+## What is Inflation?
 
-Atoms are generated based off of the total supply of atoms.
+- To understand the inflation dynamic in the cosmos-hub-chain; it is important to first understand the inflation in the blockchain space.
+Inflation and Inflation rate are interchangeable words in this space. Inflation means to inflat; means to grow to make something larger.
 
-All of the inflation gets paid to those staking.
+- In any application specific blockchain; inflation means to "_increase the monetory supply_". In the cosmos-hub-chain, it is its native token "ATOM" that acts as a monetory element. Inflation here means ATOM generation rate on annual basis. 
 
+- If the inflaion rate is 7%; it means that tokens are generated at a 7% annual rate based off of the total supply of atoms.
+
+- In cosmos-hub-chain all the inflated supply gets paid to all those actors who are stakers ( Validators and delegators ). 
+
+
+
+## What controls the inflation
+To understand the dynamics and protocol enforced regulation; you need to understand a few concepts and terminology. So you can understand each factors or variables. 
+
+cosmos-hub-chain is a proof of stake chain. Its live operations is run by a set of validators node which also allows delegation facility. Delegation meaning that the indivisual token holders can bond/stake their tokens with he system via any of the validator. Tokens holders are free to choose validators of their choice.
+cosmos-hub-chain is run by its community members of validators, delegators and atom holders. They could be called as network actors. And A sytem which is run and maintained by its believers, should pay fair and deterministic incentives for their contributions. The rules has to be written and automated. 
+
+
+
+Work done incentives -> Gas Feess
+Block production incentives -> Inflation
+ 
 If staked-supply is less than 67%, inflation rate gradually increases, (What is the rate of increase though?) until that target is hit. If staked-supply is  greater 67%, it gradually decreases until it falls below that rate.
 
 Inflation (supply increase) will range between 7% and 20%. That is calculated using the total number of atoms.
