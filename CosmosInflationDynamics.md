@@ -14,7 +14,7 @@ Inflation and Inflation rate are interchangeable words in this space. Inflation 
 
 
 
-## What controls the inflation
+## Community 
 To understand the dynamics and protocol enforced regulation; you need to understand a few concepts and terminology. So you can understand each factors or variables. 
 
 cosmos-hub-chain is a proof of stake chain. Its live operations is run by a set of validators node which also allows delegation facility. Delegation meaning that the indivisual token holders can bond/stake their tokens with he system via any of the validator. Tokens holders are free to choose validators of their choice.
@@ -56,6 +56,13 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 
 - If the current value of the bond ratio is going far behind; system tries to increase the inflation rate based on how far it went behind the Goal. The bigger the distance, bigger the rate of increase in the inflation rate. The bigger the distance; bigger the value of inflation rate. And the value for the rate of increase and the current value of inflation rate is dynamically calculated at each supply points. Meaning that system will adjust its rate of increase in the inflation rate and also the current value of the inflation rate at each block production. 
 
+## Limiting the Value of Inflation Rate 
+
+- Similar to the cap on the current value of inflation rate change; The current value of inflation rate can not go up to any height or down to zero.
+
+- This Inflation rate will always be greater than predetermined min value; and less than a predetermined max value. The Min value and Max value is a configurable parameter in the system. 
+
+
 
 ## Limiting the Value of Inflation Rate Change 
 - Though the system can not have any big or less value of the inflation rate change for increasing or reduction of rate. Positive rate change reflect the increase in the value of inflation rate; while negative rate change reflect the reduction in the value of inflation rate. 
@@ -68,20 +75,40 @@ Consider the case of 100 bonds vs 10 bond; and 100 new token supply.
 
 - The minimum absolute value of possible inflation rate change is zero. And it happens when the system is at its optimal value of bonded ratio.  At this point system will not change its inflation rate on its own.  
 
-- Formula of current inflation rate change is given by;
 
-```
-    ( 1 - CurrentBondedRatio / GoalBondedRatio ) ) * Max Positive Inflation Rate 
-```
+## Inflation tail dynamics 
+- When the inflation is in its growing trend due to having the systems bonded ratio less than optimal value; inflation can reach to its max value and after that it just stops increasing. At this point if system tries to further increase its inflation rate change so it can give more incentives to bond holders by having more and more monetory supply;  it can not go further.  At this point Inflation rate change is set to zero by the protocol, and inflation is set to its max value. And the system just can not increase the collective incentives for its bonded users. Can not attract more by becoming more attractive. 
+
+- When the inflation is in its downward trend due to having the systems bonded ratio greater than optimal value; inflation can reach to its min value and after that it just stops decreasing further. At this point if system tries to further decrease its inflation rate change so it can reduce the incentives to bond holders by having produced less and less monetory supply; it can not do so. At this point Inflation rate change is set to zero by the protocol, and inflation is set to its min value.  And the system just can not reduce the collective incentive for its bonded users. System can not be unfair more by trying to discourage non-believers. System can discourage the non-believers by upto this extent only. 
 
 - But the system dynamics will again move the system to unbalanced zone. So it will again try to come back to balanced point. This is a never ending dynamics. I will explain this complexity in some other section. 
 
 
+## Formula of current inflation rate change is given by;
+
+```
+
+   CurrentInflationRateChange = ( 1 - CurrentBondedRatio / GoalBondedRatio ) ) * MaxPositiveInflationRateChange
+   Provided the CurrentInflationRate is in its defined range. [ You will see in the next section of Inflation Rate Limit ]    
+   Otherwise Its value if set to zero. 
+   
+```
 
 
-## Limiting the Value of Inflation Rate 
-- This Inflation rate will always be greater than or equal to zero. 
 
+
+
+
+
+## Current value of the inflation rate
+
+- Current value of the inflation rate is determined by its previous value and currrent value of Inflation Rate Change. 
+
+- By now it is very clear that it is being recalculated at each supply point or block production.
+
+- When the inflation is in its growing trend due to having the systems bonded ratio less than optimal value; inflation can reach to its max value and after that it just stops increasing.  
+
+- When the inflation is in its downward trend due to having the systems bonded ratio greater than optimal value; inflation can reach to its min value and after that it just stops decreasing further. 
 
 
 ## Controlling the value of Inflation Rate
